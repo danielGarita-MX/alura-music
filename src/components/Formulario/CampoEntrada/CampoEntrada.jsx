@@ -43,7 +43,7 @@ const StyledLabel = styled.label`
   font-weight: 500;
 `
 
-export default function CampoEntrada({type='text', placeholder, name, label, autofocus=false}) {
+export default function CampoEntrada({type='text', placeholder, name, label, autofocus=false, required=false}) {
   return (
     <StyledContainer>
       <StyledLabel
@@ -55,7 +55,8 @@ export default function CampoEntrada({type='text', placeholder, name, label, aut
         type={type} 
         placeholder={placeholder}
         name={name}
-        autoFocus={autofocus}>
+        autoFocus={autofocus}
+        required={required}>
 
       </StyledInput>
     </StyledContainer>

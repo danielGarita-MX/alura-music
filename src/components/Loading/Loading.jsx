@@ -7,13 +7,16 @@ import styled from "styled-components";
 // Estilos del componente
 const StyledLoading = styled.div`
   display: flex;
+  align-items: center;
   justify-content: center;
+
+  background-color: rgba(26, 26, 26, 0.3);
 `
 
 export default function Loading() {
   return (
     <StyledLoading>
-      <img src="/images/cargando.gif" alt="Cargando datos..." />
+      <img src="/images/cargando.gif" alt="Cargando datos..." className="gif" />
     </StyledLoading>
   );
 }

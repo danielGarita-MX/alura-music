@@ -1,11 +1,17 @@
-/*
-  * Componente de formulario
-*/
-
+/* Librerias */
 import styled from "styled-components";
+import { useContext } from "react";
+
+/* Componentes y contextos */
 import CampoEntrada from "./CampoEntrada/CampoEntrada.jsx";
 import CampoOpciones from "./CampoOpciones/CampoOpciones.jsx";
 import Boton from "./Boton/Boton.jsx";
+import { GlobalContext } from "../GlobalContext/GlobalContext.jsx";
+import { usaAPI } from "../../api/useAPI.js";
+
+/*
+  * Componente de formulario
+*/
 
 const StyledForm = styled.form`
   padding: 2.4rem 6rem;
@@ -33,30 +39,52 @@ const StyledForm = styled.form`
 `
 
 export default function Formulario() {
+  // Datos a enviar
+  const { hayNuevosDatos, setHayNuevosDatos } = useContext(GlobalContext);
+
+  // Envio del formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    let datosNuevos = {
+      titulo: e.target[0].value,
+      artista: e.target[1].value,
+      categoria: e.target[4].value,
+      duracion: e.target[2].value,
+      url: e.target[3].value
+    }
+
+    usaAPI.postAPI('/musica', datosNuevos);
+    setHayNuevosDatos(!hayNuevosDatos);
+  }
+
 
   return (
     <>
-      <StyledForm>
+      <StyledForm onSubmit={handleSubmit}>
         <div className="form-inputs-container">
           <CampoEntrada
             label="Titulo"
             name="campo-titulo"
             placeholder="Ingresa el titulo de la canción"
-            autofocus>
+            autofocus
+            required>
 
           </CampoEntrada>
 
           <CampoEntrada
             label="Artista(s)"
             name="campo-artista"
-            placeholder="Separados por coma">
+            placeholder="Separados por coma"
+            required>
 
           </CampoEntrada>
 
           <CampoEntrada
             label="Duración"
             name="campo-duracion"
-            placeholder="Duración en minutos">
+            placeholder="Duración en minutos"
+            required>
 
           </CampoEntrada>
 
@@ -64,7 +92,7 @@ export default function Formulario() {
             label="Enlace"
             name="campo-enlace"
             placeholder="Ingresa el enlace (solo youtube)"
-            >
+            required>
 
           </CampoEntrada>
 

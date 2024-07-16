@@ -113,7 +113,6 @@ export default function Banner(){
                 datos.filter(dato => {
                   return Number(dato.id) === 1;
                 }).map(dato => {
-                  console.log(dato.url, dato.titulo);
                   return <Video key={dato.id} url={dato.url} titulo={dato.titulo} />
                 })
               }

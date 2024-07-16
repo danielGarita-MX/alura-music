@@ -29,7 +29,7 @@ const StyledButton = styled.button`
   }
 `
 
-export default function Boton({type, $styleButton, children}) {
+export default function Boton({type, children}) {
   return (
     <StyledButton type={type}>
       {children}
