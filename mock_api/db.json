@@ -1,0 +1,73 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Rap",
+      "bg_color": "#2E87B1",
+      "txt_color": "#F5F5F5"
+    },
+    {
+      "id": 2,
+      "nombre": "Lo-Fi Hip Hop",
+      "bg_color": "#009654",
+      "txt_color": "#F5F5F5"
+    },
+    {
+      "id": 3,
+      "nombre": "Lo-Fi Electrónica",
+      "bg_color": "#B77D03",
+      "txt_color": "#F5F5F5"
+    }
+  ],
+
+  "musica": [
+    {
+      "id": 1,
+      "titulo": "Epsplosive",
+      "artista": "Eptos Uno",
+      "categoria": 1,
+      "duracion": "6:50",
+      "url": "https://www.youtube.com/embed/Yh57XbDsgm8?si=W9pj4AERjoYCpRTb"
+    },
+    {
+      "id": 2,
+      "titulo": "Respeto Obligatorio",
+      "artista": "Kosmer La Merca Negra",
+      "categoria": 1,
+      "duracion": "3:02",
+      "url": "https://www.youtube.com/embed/aKh56fbTZaE?si=VlT2wQmvP8eELsx-"
+    },
+    {
+      "id": 3,
+      "titulo": "Flames",
+      "artista": "Van Xo Vibes",
+      "categoria": 2,
+      "duracion": "2:40",
+      "url": "https://www.youtube.com/embed/QJkEb7TkaD4?si=oCi_ppvodQfVfTY7"
+    },
+    {
+      "id": 4,
+      "titulo": "Chill Beat",
+      "artista": "Chilli Vibes Lofi",
+      "categoria": 2,
+      "duracion": "3:35",
+      "url": "https://www.youtube.com/embed/gZKbnQtNN48?si=dYC2_T1WXSvT_8_z"
+    },
+    {
+      "id": 5,
+      "titulo": "Lofi Electronic",
+      "artista": "Lo Fi Hip Hop",
+      "categoria": 3,
+      "duracion": "2:29",
+      "url": "https://www.youtube.com/embed/Lv5OTgAJlto?si=bUvYyDZM-IkpNvRM"
+    },
+    {
+      "id": 6,
+      "titulo": "Eternal Youth",
+      "artista": "Rúde",
+      "categoria": 3,
+      "duracion": "3:26",
+      "url": "https://www.youtube.com/embed/_BWPNPtsZm8?si=xGRxtkKW-MP2cX10"
+    }    
+  ]
+}
